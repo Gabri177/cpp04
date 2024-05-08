@@ -2,14 +2,17 @@
 
 Dog::Dog(void): Animal("Dog") {
 
+	this->ideas = new Brain;
 	std::cout << "Class [Dog](void) constructor called!!\n";
 }
 Dog::Dog(const Dog &obj): Animal(obj.type){
 	
+	this->ideas = new Brain;
 	std::cout << "Class [Dog](Dog) constructor called!!\n";
 }
 Dog::~Dog(void){
 
+	delete this->ideas;
 	std::cout << "Class [Dog](Dog) destructor called!!\n";
 }
 Dog&				Dog::operator=(const Dog &obj){

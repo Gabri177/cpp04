@@ -25,5 +25,6 @@ int main()
 	a_cat->makeSound();
 	delete base;
 	delete a_cat;
+	system ("leaks -q Animal");
 	return 0;
 }

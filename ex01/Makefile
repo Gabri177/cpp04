@@ -1,7 +1,7 @@
 # Makefile
 
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
-CPPFILE = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
+CPPFILE = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 OFILE = $(CPPFILE:.cpp=.o)
 NAME = Animal
 

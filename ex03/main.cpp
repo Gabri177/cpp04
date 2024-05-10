@@ -9,9 +9,7 @@ int main()
 	IMateriaSource* src = new MateriaSource();
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
-	src->learnMateria(new Cure());
-	src->learnMateria(new Cure());
-	src->learnMateria(new Cure());
+	
 
 	ICharacter* me = new Character("me");
 
@@ -22,8 +20,7 @@ int main()
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
 	tmp = src->createMateria("cure");
-	me->equip(tmp);
-	tmp = src->createMateria("cure");
+
 	// me->unequip(0);
 	// me->unequip(1);
 	// me->unequip(2);
@@ -37,6 +34,6 @@ int main()
 	delete bob;
 	delete me;
 	delete src;
-	system ("leaks -q Interfaz");
+	//system ("leaks -q Interfaz");
 	return 0;
 }

@@ -5,16 +5,16 @@
 MateriaSource::MateriaSource(void){
 
 	for (int i = 0; i < 4; i ++)
-		this->_slot[i] = nullptr;
+		this->_slot[i] = 0;
 }
 
 MateriaSource::~MateriaSource(void){
 	
 	int	i = 0;
-	while (this->_slot[i] != nullptr && i < 4){
+	while (this->_slot[i] != 0 && i < 4){
 
 		delete this->_slot[i];
-		this->_slot[i] = nullptr;
+		this->_slot[i] = 0;
 		i ++;
 	}
 }
@@ -22,7 +22,7 @@ MateriaSource::~MateriaSource(void){
 void						MateriaSource::learnMateria(AMateria* m){
 
 	int	i = 0;
-	while (this->_slot[i] != nullptr && i < 4){
+	while (this->_slot[i] != 0 && i < 4){
 		i ++;
 	}
 	if (i != 4)
@@ -39,6 +39,6 @@ AMateria*					MateriaSource::createMateria(std::string const& type){
 		//std::cout << "cure\n";
 		return new Cure();
 	else
-		return nullptr;
-	return nullptr;
+		return 0;
+	return 0;
 }

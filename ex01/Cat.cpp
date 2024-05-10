@@ -5,7 +5,7 @@ Cat::Cat(void): Animal("Cat") {
 	this->ideas = new Brain;
 	std::cout << "Class [Cat](void) constructor called!!\n";
 }
-Cat::Cat(const Cat &obj){
+Cat::Cat(const Cat &obj): Animal("Cat") {
 	
 	*this = obj;
 	std::cout << "Class [Cat](Cat) constructor called!!\n";
@@ -24,7 +24,7 @@ Cat&				Cat::operator=(const Cat &obj){
 
 			this->ideas[i] = obj.ideas[i];
 		}
-		this->type = obj.type;
+		this->_type = obj._type;
 	}
 	std::cout << "Class [Cat](Cat) operator called!!\n";
 	return *this;

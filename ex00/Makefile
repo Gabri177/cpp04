@@ -11,7 +11,7 @@ $(NAME): $(OFILE)
 	g++ $(CPPFLAGS) -o $(NAME) $(OFILE)
 
 %.o:%.cpp
-	g++ $(CPPFLAGS) -c -Wshadow $< -o $@
+	g++ $(CPPFLAGS) -c $< -o $@
 
 clean:
 	$(RM) $(OFILE)

@@ -4,7 +4,7 @@ Ice::Ice(void): AMateria("ice") {
 
 }
 
-Ice::Ice(const Ice &obj){
+Ice::Ice(const Ice &obj): AMateria("ice"){
 
 	*this = obj;
 }

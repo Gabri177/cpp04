@@ -5,7 +5,7 @@ Dog::Dog(void): Animal("Dog") {
 	this->ideas = new Brain;
 	std::cout << "Class [Dog](void) constructor called!!\n";
 }
-Dog::Dog(const Dog &obj){
+Dog::Dog(const Dog &obj): Animal("Dog"){
 	
 	*this = obj;
 	std::cout << "Class [Dog](Dog) constructor called!!\n";

@@ -1,6 +1,6 @@
 #include "Animal.hpp"
 
-Animal::Animal(void) : type("UnSet"){
+Animal::Animal(void) : _type("UnSet"){
 
 	std::cout << "class [Animal](void) constructor called!\n";
 }
@@ -8,18 +8,18 @@ Animal::Animal(void) : type("UnSet"){
 Animal::Animal(std::string type){
 
 	std::cout << "class [Animal](string) constructor called!\n";
-	this->type = type;
+	this->_type = type;
 }
 
 Animal::Animal(const Animal &obj){
 
 	std::cout << "class [Animal](Animal) constructor called!\n";
-	this->type = obj.type;
+	this->_type = obj._type;
 }
 
 Animal::~Animal(void){
 
-	std::cout << this->type << " class [Animal](void) destoryed!!" << std::endl;
+	std::cout << this->_type << " class [Animal](void) destoryed!!" << std::endl;
 }
 
 Animal&				Animal::operator=(const Animal &obj){
@@ -27,14 +27,14 @@ Animal&				Animal::operator=(const Animal &obj){
 	std::cout << "class [Animal](Animal) operator called!\n";
 	if (this != &obj){
 
-		this->type = obj.type;
+		this->_type = obj._type;
 	}
 	return *this;
 }
 
 std::string			Animal::getType(void) const{
 
-	return this->type;
+	return this->_type;
 }
 
 void		Animal::makeSound(void) const{

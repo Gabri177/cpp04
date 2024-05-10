@@ -29,6 +29,7 @@ int main()
 	Animal	*obj[4] = {new Dog(), new Dog(), new Cat(), new Cat()};
 	Dog	*test1;
 	test1 = new Dog();
+	delete test1;
 	test1 = dynamic_cast<Dog*> (obj[1]);
 	test1->makeSound();	
 	for (int x  = 0; x < 4 ; x ++){
@@ -36,6 +37,6 @@ int main()
 		delete obj[x];
 	}
 	
-	system ("leaks -q Animal");
+	//system ("leaks -q Animal");
 	return 0;
 }

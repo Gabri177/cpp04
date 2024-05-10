@@ -17,9 +17,10 @@ int main()
 	tmp = src->createMateria("ice");
 	//std::cout << tmp->getType();
 	me->equip(tmp);
+
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
-	tmp = src->createMateria("cure");
+
 
 	// me->unequip(0);
 	// me->unequip(1);
@@ -34,6 +35,5 @@ int main()
 	delete bob;
 	delete me;
 	delete src;
-	//system ("leaks -q Interfaz");
 	return 0;
 }

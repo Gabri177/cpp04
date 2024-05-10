@@ -25,8 +25,11 @@ void						MateriaSource::learnMateria(AMateria* m){
 	while (this->_slot[i] != 0 && i < 4){
 		i ++;
 	}
-	if (i != 4)
+	if (i != 4){
+
 		this->_slot[i] = m->clone();
+		delete m;
+	}
 
 }
 

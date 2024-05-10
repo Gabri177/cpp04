@@ -48,7 +48,8 @@ void						Character::equip(AMateria* m){
 	if (!m) return;
     for (int i = 0; i < 4; i++) {
         if (this->_slot[i] == 0) {
-            this->_slot[i] = m;
+            this->_slot[i] = m->clone();
+			delete m;
             break;
         }
     }

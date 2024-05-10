@@ -4,17 +4,21 @@
 # include <string>
 # include "ICharacter.hpp"
 
+class ICharacter;
+
 class AMateria {
 
 	protected:
 		std::string				_type;
+		
 	public:
 								AMateria(void);
+								AMateria(std::string const& type);
 								AMateria(const AMateria &obj);
 		virtual					~AMateria(void);
 		AMateria&				operator=(const AMateria &obj);
 		std::string const&		getType(void) const;
 		virtual AMateria*  		clone(void) const = 0;
-		virtual void			use(ICharacter& target);
+		virtual void			use(ICharacter& target) = 0;
 };
 #endif

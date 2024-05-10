@@ -1,7 +1,7 @@
 # Makefile
 
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
-CPPFILE = main.cpp 
+CPPFILE = AMateria.cpp Character.cpp  Cure.cpp Ice.cpp main.cpp MateriaSource.cpp
 OFILE = $(CPPFILE:.cpp=.o)
 NAME = Interfaz
 
